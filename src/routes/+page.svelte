@@ -44,7 +44,7 @@
         <section>
             <SlideGridLayout>
                 <span slot="main" class="page">
-                    <h2>Agenda</h2>
+                    <h3>Agenda</h3>
 
                     <ul>
                         <li class="fragment">Subject 1</li>
@@ -68,8 +68,13 @@
         text-align: left;
     }
 
+    :global(.reveal H3) {
+        border-left: 0.1em solid var(--r-link-color-dark);
+        padding-left: 0.2em;
+    }
+
     :global(.reveal UL) {
-        margin: 0;
+        margin: 0.3em;
         font-size: 0.8em;
     }
 
