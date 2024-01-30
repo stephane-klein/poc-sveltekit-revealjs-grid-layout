@@ -11,7 +11,8 @@
 
         const deck = new Reveal({
             slideNumber: true,
-            center: false
+            center: false,
+            hash: true
         });
         deck.initialize();
     });
@@ -40,6 +41,21 @@
                 <span slot="bottom-right">Bottom right</span>
             </SlideGridLayout>
         </section>
+        <section>
+            <SlideGridLayout>
+                <span slot="main" class="page">
+                    <h2>Agenda</h2>
+
+                    <ul>
+                        <li class="fragment">Subject 1</li>
+                        <li class="fragment">Subject 2</li>
+                        <li class="fragment">Subject 3</li>
+                        <li class="fragment">Subject 4</li>
+                        <li class="fragment">Subject 5</li>
+                    </ul>
+                </span>
+            </SlideGridLayout>
+        </section>
     </div>
 </div>
 
@@ -48,11 +64,29 @@
         height: 100%;
     }
 
+    :global(.reveal .slides) {
+        text-align: left;
+    }
+
+    :global(.reveal UL) {
+        margin: 0;
+        font-size: 0.8em;
+    }
+
+    :global(.reveal UL LI) {
+        margin-bottom: 0.5em;
+    }
+
+    .page {
+        min-height: 80%;
+    }
+
     .center {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
+        width: 100%;
     }
     :global(.top-left img, .top img, .top-right img, .bottom-left img, .bottom img, .bottom-right img) {
         margin: 0;
